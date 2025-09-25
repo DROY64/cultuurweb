@@ -23,11 +23,13 @@ function MyForm() {
       <label htmlFor="">Onbekend
         <input type="radio" name="Onbekend" id="" value="X" checked={selectedSex === ' '} onChange={handleChange}/>
       </label>
+      <br />
       <label>Naam:
         <input type="text" required placeholder='Voornaam'/>
         <input type="text" required placeholder='Tussenvoegsel(S)'/>
         <input type="text" required placeholder='Achternaam'/>
       </label>
+      <br />
       <button type="submit">Verder</button>
     </form>
   )
@@ -45,7 +47,7 @@ function App() {
         </button>
       </div>
     </>, 
-    MyForm
+    <MyForm />
   )
 }
 
