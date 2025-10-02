@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-// import button from "./Buttons";
+import "./Buttons.jsx";
 
 function MyForm() {
   const [selectedSex, setSelectedSex] = useState("sex");
@@ -350,6 +350,7 @@ function MyForm2() {
           >
             Verder <i class="fa-solid fa-arrow-right"></i>
           </button>
+          {/* {pressButton(proceed, MyForm2)} */}
         </div>
         {/* <button type="submit">Verder</button> */}
       </form>
@@ -368,7 +369,7 @@ function MyForm3() {
     <>
       <form>
         <div>
-          <label htmlFor="mailc" class="block text-sm/6 mt-3">
+          <label for="aname" class="block text-sm/6 mt-3">
             Naam activiteit
           </label>
 

@@ -1,6 +1,6 @@
 import "./Forms.jsx";
 
-export default function button(state, page) {
+export default function pressButton(state, page) {
     function pageForward() {
         if (page == <MyForm/>) {
               return <MyForm2/>;
