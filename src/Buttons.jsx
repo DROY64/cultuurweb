@@ -38,12 +38,12 @@ export default function button(state, page) {
     }
     else if (state == back) {
         return (
-          <button type="button" class="rounded-md text-sm/6 outline-1 -outline-offset-1 outline-gray-300 px-16 py-2 bg-transparent font-semibold text-black" onClick={pageBackward}><i class="fa-solid fa-xmark"></i> Terug</button>
+          <button type="button" class="rounded-md text-sm/6 outline-1 -outline-offset-1 outline-gray-300 px-16 py-2 bg-transparent font-semibold text-black" onClick={pageBackward}><i class="fa-solid fa-rotate-left"></i> Terug</button>
             );
         }
     else if (state == submit) {
         return (
-          <button type="submit" class="rounded-md bg-black px-16 py-2 text-sm font-semibold text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Bevestig <i class="fa-solid fa-arrow-right"></i></button>
+          <button type="submit" class="rounded-md bg-black px-16 py-2 text-sm font-semibold text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Bevestig <i class="fa-solid fa-check"></i></button>
         );
     }
 }

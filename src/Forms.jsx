@@ -11,8 +11,6 @@ function MyForm() {
 
   return (
     <>
-      <h1>Instelling aanmelden</h1>
-      <br />
       <form>
         <fieldset>
           <legend class="text-sm/6 text-black">Aanhef *</legend>
@@ -190,9 +188,6 @@ function MyForm2() {
 
   return (
     <>
-      <h1>
-        <b>Instelling aanmelden</b>
-      </h1>
       <p class="mt-1 text-sm/6 text-gray-500">
         Vul hier de informatie in van de instelling.
       </p>
@@ -310,7 +305,10 @@ function MyForm2() {
         </div>
         <div>
           <div class="col-span-full mt-2">
-            <label htmlFor="instLogo" class="block text-sm/6 font-medium text-black">
+            <label
+              htmlFor="instLogo"
+              class="block text-sm/6 font-medium text-black"
+            >
               Instelling logo:
             </label>
             <div class="mt-2 flex justify-center rounded-lg border border-dashed border-grey/25 px-6 py-10">
@@ -344,7 +342,7 @@ function MyForm2() {
             type="button"
             class="rounded-md text-sm/6 outline-1 -outline-offset-1 outline-gray-300 px-16 py-2 bg-transparent font-semibold text-black"
           >
-            <i class="fa-solid fa-xmark"></i> Annuleer
+            <i class="fa-solid fa-rotate-left"></i> Terug
           </button>
           <button
             type="submit"
@@ -368,7 +366,6 @@ function MyForm3() {
 
   return (
     <>
-      <h1>Instelling aanmelden</h1>
       <form>
         <div>
           <label htmlFor="mailc" class="block text-sm/6 mt-3">
@@ -436,7 +433,7 @@ function MyForm3() {
             type="button"
             class="rounded-md text-sm/6 outline-1 -outline-offset-1 outline-gray-300 px-16 py-2 bg-transparent font-semibold text-black"
           >
-            <i class="fa-solid fa-xmark"></i> Annuleer
+            <i class="fa-solid fa-rotate-left"></i> Terug
           </button>
           <button
             type="submit"
@@ -460,7 +457,6 @@ function MyFormSummary() {
 
   return (
     <>
-      <h1>Instelling aanmelden</h1>
       <form>
         <fieldset>
           <legend class="text-sm/6 font-semibold text-black">Aanhef</legend>
@@ -552,8 +548,7 @@ function MyFormSummary() {
         </div>
         <div>
           <label htmlFor="mailcc" class="block text-sm/6 mt-3">
-            {" "}
-            Email Contactpersoon controle{" "}
+            Email Contactpersoon controle
           </label>
           <div class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
             <div class="shrink-0 text-base text-gray-500 select-none sm:text-sm/6">
@@ -571,8 +566,7 @@ function MyFormSummary() {
         </div>
         <div>
           <label htmlFor="telc" class="block text-sm/6 mt-3">
-            {" "}
-            Telefoonnummer Contactpersoon{" "}
+            Telefoonnummer Contactpersoon
           </label>
 
           <div class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
@@ -642,7 +636,7 @@ function MyFormSummary() {
             type="button"
             class="rounded-md text-sm/6 outline-1 -outline-offset-1 outline-gray-300 px-16 py-2 bg-transparent font-semibold text-black"
           >
-            <i class="fa-solid fa-xmark"></i> Annuleer
+            <i class="fa-solid fa-rotate-left"></i> Terug
           </button>
           <button
             type="submit"
@@ -666,13 +660,16 @@ function MyFormConfirm() {
 
   return (
     <>
-      <h1>Instelling aanmelden</h1>
+      <h1>Bevestigd</h1>
+      <p>
+        <h2>Een kopie is naar uw email verstuurd ter Bevestiging.</h2>
+      </p>
     </>
   );
 }
 
 function Form() {
-  return <MyForm />;
+  return <MyForm2 />;
 }
 
 export default Form;
