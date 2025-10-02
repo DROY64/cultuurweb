@@ -15,7 +15,7 @@ function MyForm() {
       <br />
       <form>
         <fieldset>
-          <legend class="text-sm/6 font-semibold text-black">Aanhef</legend>
+          <legend class="text-sm/6 text-black">Aanhef *</legend>
           <div class="mt-1 grid grid-cols-5">
             <div class="flex items-center gap-x-3">
               <input
@@ -72,14 +72,14 @@ function MyForm() {
         </fieldset>
 
         <label class="block text-sm/6 mt-3">
-          Naam:
+          Naam
           <div class="grid grid-cols-2 gap-4">
             <div class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
               <input
                 type="text"
                 name="voor"
                 required
-                placeholder="Voornaam"
+                placeholder="Voornaam *"
                 class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
               />
             </div>
@@ -97,7 +97,7 @@ function MyForm() {
                 type="text"
                 name="achter"
                 required
-                placeholder="Achternaam"
+                placeholder="Achternaam *"
                 class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
               />
             </div>
@@ -106,7 +106,7 @@ function MyForm() {
 
         <div>
           <label htmlFor="mailc" class="block text-sm/6 mt-3">
-            Email Contactpersoon
+            Email Contactpersoon *
           </label>
 
           <div class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
@@ -125,7 +125,7 @@ function MyForm() {
         </div>
         <div>
           <label htmlFor="mailcc" class="block text-sm/6 mt-3">
-            Email Contactpersoon controle
+            Email Contactpersoon controle *
           </label>
           <div class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
             <div class="shrink-0 text-base text-gray-500 select-none sm:text-sm/6">
@@ -143,7 +143,7 @@ function MyForm() {
         </div>
         <div>
           <label htmlFor="telc" class="block text-sm/6 mt-3">
-            Telefoonnummer Contactpersoon
+            Telefoonnummer Contactpersoon *
           </label>
 
           <div class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
