@@ -125,7 +125,6 @@ function MyForm() {
         </div>
         <div>
           <label htmlFor="mailcc" class="block text-sm/6 mt-3">
-            
             Email Contactpersoon controle
           </label>
           <div class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
@@ -144,7 +143,6 @@ function MyForm() {
         </div>
         <div>
           <label htmlFor="telc" class="block text-sm/6 mt-3">
-            
             Telefoonnummer Contactpersoon
           </label>
 
@@ -211,87 +209,92 @@ function MyForm2() {
             />
           </div>
         </label>
-        <br />
+
         <div>
           <label htmlFor="adres" class="block text-sm/6 mt-3">
             <h2 class="text-base/7 font-semibold">Adres</h2>
           </label>
-          <div>
-            <label htmlFor="straat">Straatnaam</label>
-            <div class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
-              <div class="shrink-0 text-base text-gray-500 select-none sm:text-sm/6">
-                <i class="fa-solid fa-envelope"></i>
+          <div class="grid grid-rows-3 gap-3">
+            <div className="grid grid-cols-3 gap-4">
+              <div class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
+                <input
+                  type="text"
+                  name="postcode"
+                  placeholder="Postcode *"
+                  id="postcode"
+                  required
+                  class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
+                />
               </div>
-              <input
-                type="adres"
-                name="straat"
-                placeholder="Voorbeeld 123"
-                id="straat"
-                required
-                class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
-              />
+              <div class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
+                <input
+                  type="text"
+                  name="hnummer"
+                  placeholder="Huisnr. *"
+                  id="hnummer"
+                  required
+                  class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
+                />
+              </div>
+              <div class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
+                <input
+                  type="text"
+                  name="toevoeging"
+                  placeholder="Toevoeging"
+                  id="toevoeging"
+                  required
+                  class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
+                />
+              </div>
             </div>
-            <label htmlFor="postcode">Postcode</label>
-            <div class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
-              <div class="shrink-0 text-base text-gray-500 select-none sm:text-sm/6">
-                <i class="fa-solid fa-envelope"></i>
+            <div className="grid grid-cols-2 gap-4">
+              <div class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
+                <input
+                  type="adres"
+                  name="straat"
+                  placeholder="Straatnaam *"
+                  id="straat"
+                  required
+                  class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
+                />
               </div>
-              <input
-                type="text"
-                name="postcode"
-                placeholder="mail@voorbeeld.nl"
-                id="postcode"
-                required
-                class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
-              />
+              <div class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
+                <input
+                  type="text"
+                  name="plaats"
+                  placeholder="Plaatsnaam *"
+                  id="plaats"
+                  required
+                  class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
+                />
+              </div>
             </div>
-            <label htmlFor="stad">Stad</label>
             <div class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
-              <div class="shrink-0 text-base text-gray-500 select-none sm:text-sm/6">
-                <i class="fa-solid fa-envelope"></i>
-              </div>
-              <input
-                type="text"
-                name="stad"
-                placeholder="mail@voorbeeld.nl"
-                id="stad"
-                required
-                class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
-              />
-            </div>
-            <label htmlFor="provincie">Provincie</label>
-            <div class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
-              <div class="shrink-0 text-base text-gray-500 select-none sm:text-sm/6">
-                <i class="fa-solid fa-envelope"></i>
-              </div>
-              <input
-                type="text"
-                name="provincie"
-                placeholder="mail@voorbeeld.nl"
-                id="provincie"
-                required
-                class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
-              />
-            </div>
-            <label htmlFor="land">Land</label>
-            <div class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
-              <div class="shrink-0 text-base text-gray-500 select-none sm:text-sm/6">
-                <i class="fa-solid fa-envelope"></i>
-              </div>
               <input
                 type="text"
                 name="land"
-                placeholder="mail@voorbeeld.nl"
+                placeholder="Land"
                 id="land"
+                required
+                class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
+              />
+            </div>
+            <div class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
+              <input
+                type="tel"
+                name="telint"
+                placeholder="Telefoonnummer *"
+                id="telint"
                 required
                 class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
               />
             </div>
           </div>
         </div>
+        <br />
         <div class="col-span-full">
           <label for="about" class="block text-sm/6 font-medium text-black">
-            Beschrijving
+            <h2 class="text-base/7 font-semibold">Beschrijving</h2>
           </label>
           <div class="mt-2">
             <textarea
@@ -306,9 +309,9 @@ function MyForm2() {
           </p>
         </div>
         <div>
-          <div class="col-span-full">
-            <label for="" class="block text-sm/6 font-medium text-black">
-              Instelling logo
+          <div class="col-span-full mt-2">
+            <label htmlFor="instLogo" class="block text-sm/6 font-medium text-black">
+              Instelling logo:
             </label>
             <div class="mt-2 flex justify-center rounded-lg border border-dashed border-grey/25 px-6 py-10">
               <div class="text-center">
@@ -331,53 +334,6 @@ function MyForm2() {
                 </div>
                 <p class="text-xs/5 text-gray-400">PNG, JPG, ICO t/m 2MB</p>
                 <p class="text-xs/5 text-gray-400">800x800px</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div>
-          <label
-            htmlFor="price"
-            class="block text-sm/6 font-medium text-gray-900"
-          >
-            Price
-          </label>
-          <div class="mt-2">
-            <div class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
-              <div class="shrink-0 text-base text-gray-500 select-none sm:text-sm/6">
-                $
-              </div>
-              <input
-                id="price"
-                type="text"
-                name="price"
-                placeholder="0.00"
-                class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
-              />
-              <div class="grid shrink-0 grid-cols-1 focus-within:relative">
-                <select
-                  id="currency"
-                  name="currency"
-                  aria-label="Currency"
-                  class="col-start-1 row-start-1 w-full appearance-none rounded-md py-1.5 pr-7 pl-3 text-base text-gray-500 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
-                >
-                  <option>USD</option>
-                  <option>CAD</option>
-                  <option>EUR</option>
-                </select>
-                <svg
-                  viewBox="0 0 16 16"
-                  fill="currentColor"
-                  data-slot="icon"
-                  aria-hidden="true"
-                  class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4"
-                >
-                  <path
-                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z"
-                    clip-rule="evenodd"
-                    fill-rule="evenodd"
-                  />
-                </svg>
               </div>
             </div>
           </div>
