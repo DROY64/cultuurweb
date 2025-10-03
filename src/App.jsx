@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <div class="flex flex-col items-center rounded-lg bg-white px-32 py-16 mt-4">
-        <h1 class="text-center mb-8"><b>Aanmelden</b></h1>
+        <h1 class="text-center"><b>Aanmelden</b></h1>
         <Form />
       </div>
     </>

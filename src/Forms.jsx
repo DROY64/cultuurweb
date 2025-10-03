@@ -9,8 +9,20 @@ function MyForm() {
     setSelectedSex(event.target.value);
   };
 
+  const [vname, setVName] = useState("");
+  const [tname, setTName] = useState("");
+  const [aname, setAName] = useState("");
+  const [cmail, setCmail] = useState("");
+  const [ccmail, setCCmail] = useState("");
+  const [ctel, setCtel] = useState("");
+
+
   return (
     <>
+      <p class="mt-1 text-sm/6 text-gray-500 mb-8">
+        Vul hier informatie in van uzelf of een relevante contactpersoon.
+      </p>
+      <br />
       <form>
         <fieldset>
           <legend class="text-sm/6 text-black">Aanhef *</legend>
@@ -79,6 +91,8 @@ function MyForm() {
                 required
                 placeholder="Voornaam *"
                 class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
+                value={vname}
+                onChange={e => setVName(e.target.value)}
               />
             </div>
             <div class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
@@ -88,6 +102,8 @@ function MyForm() {
                 required
                 placeholder="Tussenvoegsel(s)"
                 class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
+                value={tname}
+              onChange={e => setTName(e.target.value)}
               />
             </div>
             <div class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600 col-span-2">
@@ -97,13 +113,15 @@ function MyForm() {
                 required
                 placeholder="Achternaam *"
                 class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
+                value={aname}
+              onChange={e => setAName(e.target.value)}
               />
             </div>
           </div>
         </label>
 
         <div>
-          <label htmlFor="mailc" class="block text-sm/6 mt-3">
+          <label htmlFor="cmail" class="block text-sm/6 mt-3">
             Email Contactpersoon *
           </label>
 
@@ -113,16 +131,18 @@ function MyForm() {
             </div>
             <input
               type="email"
-              name="mailc"
+              name="cmail"
               placeholder="mail@voorbeeld.nl"
-              id="mailc"
+              id="cmail"
               required
               class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
+            value={cmail}
+            onChange={e => setCmail(e.target.value)}
             />
           </div>
         </div>
         <div>
-          <label htmlFor="mailcc" class="block text-sm/6 mt-3">
+          <label htmlFor="ccmail" class="block text-sm/6 mt-3">
             Email Contactpersoon controle *
           </label>
           <div class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
@@ -131,16 +151,18 @@ function MyForm() {
             </div>
             <input
               type="email"
-              name="mailcc"
-              id="mailcc"
+              name="ccmail"
+              id="ccmail"
               placeholder="mail@voorbeeld.nl"
               required
               class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
+            value={ccmail}
+            onChange={e => setCCmail(e.target.value)}
             />
           </div>
         </div>
         <div>
-          <label htmlFor="telc" class="block text-sm/6 mt-3">
+          <label htmlFor="ctel" class="block text-sm/6 mt-3">
             Telefoonnummer Contactpersoon *
           </label>
 
@@ -150,12 +172,14 @@ function MyForm() {
             </div>
             <input
               type="tel"
-              name="telc"
-              id="telc"
+              name="ctel"
+              id="ctel"
               minLength={9}
               maxLength={10}
               required
               class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
+            value={ctel}
+            onChange={e => setCtel(e.target.value)}
             />
           </div>
         </div>
@@ -180,17 +204,25 @@ function MyForm() {
 }
 
 function MyForm2() {
-  const [selectedSex, setSelectedSex] = useState("banana");
 
-  const handleChange = (event) => {
-    setSelectedSex(event.target.value);
-  };
+  const [instname, setInstName] = useState("");
+  const [postcode, setPostcode] = useState("");
+  const [huisnummer, setHuisnummer] = useState("");
+  const [toevoeging, setToevoeging] = useState("");
+  const [straat, setStraat] = useState("");
+  const [plaats, setPlaats] = useState("");
+  const [land, setLand] = useState("");
+  const [insttel, setInstTel] = useState("");
+  const [about, setInstAbout] = useState("");
+  const [logo, setInstLogo] = useState("");
+
 
   return (
     <>
-      <p class="mt-1 text-sm/6 text-gray-500">
+      <p class="mt-1 text-sm/6 text-gray-500 mb-4">
         Vul hier de informatie in van de instelling.
       </p>
+      <br />
       <form>
         <br />
         <label class="text-base/7">
@@ -198,9 +230,11 @@ function MyForm2() {
           <div class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600 col-span-2">
             <input
               type="text"
-              name="achter"
+              name="instName"
               required
               class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
+            value={instname}
+            onChange={e => setInstName(e.target.value)}
             />
           </div>
         </label>
@@ -219,6 +253,8 @@ function MyForm2() {
                   id="postcode"
                   required
                   class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
+                value={postcode}
+                onChange={e => setPostcode(e.target.value)}
                 />
               </div>
               <div class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
@@ -229,6 +265,8 @@ function MyForm2() {
                   id="hnummer"
                   required
                   class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
+                value={huisnummer}
+                onChange={e => setHuisnummer(e.target.value)}
                 />
               </div>
               <div class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
@@ -239,6 +277,8 @@ function MyForm2() {
                   id="toevoeging"
                   required
                   class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
+                value={toevoeging}
+                onChange={e => setToevoeging(e.target.value)}
                 />
               </div>
             </div>
@@ -251,6 +291,8 @@ function MyForm2() {
                   id="straat"
                   required
                   class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
+                value={straat}
+                onChange={e => setStraat(e.target.value)}
                 />
               </div>
               <div class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
@@ -261,6 +303,8 @@ function MyForm2() {
                   id="plaats"
                   required
                   class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
+                value={plaats}
+                onChange={e => setPlaats(e.target.value)}
                 />
               </div>
             </div>
@@ -272,6 +316,8 @@ function MyForm2() {
                 id="land"
                 required
                 class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
+              value={land}
+              onChange={e => setLand(e.target.value)}
               />
             </div>
             <div class="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
@@ -282,6 +328,8 @@ function MyForm2() {
                 id="telint"
                 required
                 class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
+              value={insttel}
+              onChange={e => setInstTel(e.target.value)}
               />
             </div>
           </div>
@@ -297,6 +345,8 @@ function MyForm2() {
               name="about"
               rows="3"
               class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-black outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-500 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600"
+              value={about}
+              onChange={e => setInstAbout(e.target.value)}
             ></textarea>
           </div>
           <p class="mt-3 text-sm/6 text-gray-500">
@@ -326,6 +376,8 @@ function MyForm2() {
                       name="instLogo"
                       class="sr-only"
                       accept=".png,.jpg,.jpeg,.ico"
+                    value={logo}
+                    onChange={e => setInstLogo(e.target.value)}
                     />
                   </label>
                   <p class="pl-1">of sleep het hier</p>
@@ -359,11 +411,13 @@ function MyForm2() {
 }
 
 function MyForm3() {
-  const [selectedSex, setSelectedSex] = useState("banana");
-
-  const handleChange = (event) => {
-    setSelectedSex(event.target.value);
-  };
+  
+  const [vname, setVName] = useState("");
+  const [tname, setTName] = useState("");
+  const [aname, setAName] = useState("");
+  const [cmail, setCmail] = useState("");
+  const [ccmail, setCCmail] = useState("");
+  const [ctel, setCtel] = useState("");
 
   return (
     <>
